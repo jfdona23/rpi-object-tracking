@@ -18,4 +18,4 @@ Or you can set the IP/Port where the app will be listening to by using environme
 pip install -r src/requirements.txr
 STREAM_IP=192.168.0.151 STREAM_PORT=8080 python picamera_stream.py
 ```
-Then check the live video at [http://192.168.0.151:8080](http://192.168.0.151:8080). \
+Then check the live video at [http://192.168.0.151:8080](http://192.168.0.151:8080).

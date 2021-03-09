@@ -14,6 +14,7 @@ from threading import Condition
 
 import picamera
 
+from object_detection import detect_common_objects
 from pages import index_page
 
 # ----------------------------------------------------------------------------------------------- #
@@ -96,7 +97,7 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
                 while True:
                     with output.condition:
                         output.condition.wait()
-                        frame = output.frame
+                        frame = detect_common_objects(output.frame)
                     self.wfile.write(b'--FRAME\r\n')
                     self.send_header('Content-Type', 'image/jpeg')
                     self.send_header('Content-Length', len(frame))
