@@ -5,12 +5,12 @@ http://picamera.readthedocs.io/en/latest/recipes2.html#web-streaming
 """
 
 import io
-import os
 import logging
+import os
 import socketserver
 
-from threading import Condition
 from http import server
+from threading import Condition
 
 import picamera
 
@@ -31,6 +31,7 @@ camera_exposure_mode = "auto"
 camera_sensor_mode = 0
 camera_awb_mode = "auto"
 camera_drc_strength = "high"
+output = None # StreamingOutput class object shared by the main loop and the HTTP handler
 
 
 # ----------------------------------------------------------------------------------------------- #
@@ -91,6 +92,7 @@ class StreamingHandler(server.BaseHTTPRequestHandler):
             self.send_header('Content-Type', 'multipart/x-mixed-replace; boundary=FRAME')
             self.end_headers()
             try:
+                global output
                 while True:
                     with output.condition:
                         output.condition.wait()
@@ -129,6 +131,7 @@ def start():
         camera.awb_mode = camera_awb_mode
         camera.drc_strength = camera_drc_strength
 
+        global output
         output = StreamingOutput()
         camera.start_recording(output, format='mjpeg')
         try:
