@@ -8,7 +8,7 @@ from time import sleep
 
 from picamera import PiCamera
 
-from object_detection import detect_common_objects
+# from object_detection import detect_common_objects
 
 
 MODE = os.environ.get("MODE", "picamera")
