@@ -59,7 +59,7 @@ class CameraCapture:
         if self.is_picamera:
             self.camera.close()
 
-        if self.is_opencv
+        if self.is_opencv:
             self.camera.release()
 
     def get_frame(self):
