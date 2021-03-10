@@ -31,7 +31,7 @@ This project is inspired in [this](https://github.com/leigh-johnson/rpi-deep-pan
 ## Python Requirements
 Install the _requirements.txt_ file:
 ```bash
-pip install -r src/requirements.txr
+pip install -r src/requirements.txt
 ```
 
 ## Usage
