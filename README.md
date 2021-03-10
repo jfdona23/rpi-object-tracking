@@ -45,6 +45,7 @@ Several options can be configured using environment variables before the command
 | RES_HEIGHT  | Resolution - height                         |    480    |
 | FRAMERATE   | Framerate (currently is not implemented)    |     24    |
 | DETECT      | Enable (1) or disable (0) objects detection |     1     |
+
 Example:
 ```bash
 LISTEN_HOST=127.0.0.1 MODE=opencv RES_WIDTH=1280 RES_HEIGHT=800 DETECT=0 python3 src/camera_stream.py
