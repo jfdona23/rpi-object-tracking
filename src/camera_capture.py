@@ -3,6 +3,8 @@ Capture video from camera
 """
 import cv2
 
+from time import sleep
+
 from object_detection import detect_common_objects
 
 
@@ -12,9 +14,9 @@ class CameraCapture:
     def __init__(self):
         """Init"""
 
-        self.camera = = cv2.VideoCapture(0)
-
-        if not camera.isOpened():
+        self.camera = cv2.VideoCapture(0)
+        sleep(2)
+        if not self.camera.isOpened():
             raise IOError("Could not open Camera")
 
     def close_camera(self):
@@ -30,6 +32,6 @@ class CameraCapture:
         """
         
         if self.camera.isOpened():
-            _, frame = camera.read()
-            # image = detect_common_objects(frame)
-            return frame
+            _, frame = self.camera.read()
+            image = detect_common_objects(frame)
+            return cv2.imencode('.jpg', image)[1].tobytes()
