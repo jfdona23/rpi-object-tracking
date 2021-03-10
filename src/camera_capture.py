@@ -1,10 +1,12 @@
 """
 Capture video from camera
 """
-import cv2
-import numpy as np
+import os
 
 from time import sleep
+
+import cv2
+import numpy as np
 
 from picamera import PiCamera
 
