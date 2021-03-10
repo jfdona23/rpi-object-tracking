@@ -10,6 +10,7 @@
 ## About
 This project is inspired in [this](https://github.com/leigh-johnson/rpi-deep-pantilt) one but in this case it makes use of the [Pi's Camera web stream recipe](http://picamera.readthedocs.io/en/latest/recipes2.html#web-streaming) to stream video from the Pi's Camera over HTTP. I've tweaked it for my own purposes. \
 I'm evaluating solutions for object detection as [CVLib](https://www.cvlib.net/) and [ImageAI](https://imageai.readthedocs.io/en/latest/).
+Also, I'm evaluating capturing images with PiCamera or OpenCV.
 
 ## OS Requirements
 * Install the following libraries:
@@ -67,6 +68,8 @@ You can safely ignore this error if you're not using HadoopFS, otherwise you wil
 * [Original project repo](https://github.com/leigh-johnson/rpi-deep-pantilt)
 * [Pi's Camera web stream recipe](https://picamera.readthedocs.io/en/latest/recipes2.html#web-streaming)
 * [Pi's Camera API reference](https://picamera.readthedocs.io/en/release-1.13/api_camera.html)
-* [Install OpenCV](https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/)
+* [Streaming with Flask article](https://www.pyimagesearch.com/2019/09/02/opencv-stream-video-to-web-browser-html-page)
+* [Streaming with Flask repo](https://github.com/miguelgrinberg/flask-video-streaming)
+* [Install OpenCV](https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/) (alternative way)
 * [Install Tensorflow](https://www.tensorflow.org/install/pip) (alternative way)
 * [CVlib Repo](https://github.com/arunponnusamy/cvlib)
