@@ -1,8 +1,15 @@
 """
 Video Stream over HTTP
 """
+import os
+
 from flask import Flask, render_template, Response
+
 from camera_capture import CameraCapture
+
+LISTEN_HOST = os.environ.get("LISTEN_HOST", "0.0.0.0")
+LISTEN_PORT = os.environ.get("LISTEN_PORT", "8080")
+
 
 app = Flask(__name__)
 
@@ -24,4 +31,4 @@ def video_feed():
     )
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host=LISTEN_HOST, port=LISTEN_PORT, debug=True)
