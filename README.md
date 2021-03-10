@@ -65,8 +65,8 @@ You can safely ignore this error if you're not using HadoopFS, otherwise you wil
 * When enabling object detection, the image lag is just horrible. Well, this is part of my next step where I'll try using Threads and buffers to improve latency, but at the moment every single frame is sent to the object detection method, parsed and then sent back to finally be encoded as a .jpg image. Such a journey for a single frame, hum?
 
 ## Reference Links
-* [Leigh Johnson article](https://towardsdatascience.com/real-time-object-tracking-with-tensorflow-raspberry-pi-and-pan-tilt-hat-2aeaef47e134)
-* [Leigh Johnson project repo](https://github.com/leigh-johnson/rpi-deep-pantilt)
+* [Leigh Johnson's article](https://towardsdatascience.com/real-time-object-tracking-with-tensorflow-raspberry-pi-and-pan-tilt-hat-2aeaef47e134)
+* [Leigh Johnson's project repo](https://github.com/leigh-johnson/rpi-deep-pantilt)
 * [Pi's Camera web stream recipe](https://picamera.readthedocs.io/en/latest/recipes2.html#web-streaming)
 * [Pi's Camera API reference](https://picamera.readthedocs.io/en/release-1.13/api_camera.html)
 * [Streaming with Flask article](https://www.pyimagesearch.com/2019/09/02/opencv-stream-video-to-web-browser-html-page)
