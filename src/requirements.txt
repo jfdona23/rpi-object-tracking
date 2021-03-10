@@ -1,4 +1,7 @@
 cvlib==0.2.6
-opencv-python==4.5.1.48
+Flask==1.1.2
+# Pick only ONE of the following opencv options:
+#opencv-python==4.5.1.48   # Full X11 dependencies
+opencv-python-headless==4.5.1.48  # No X11 dependencies (cv2.imshow unsupported)
 picamera==1.13
 tensorflow==1.14.0
