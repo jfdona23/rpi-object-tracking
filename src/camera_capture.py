@@ -13,19 +13,29 @@ from picamera import PiCamera
 # from object_detection import detect_common_objects
 
 
+# ----------------------------------------------------------------------------------------------- #
+# Variables and config
+# ----------------------------------------------------------------------------------------------- #
 MODE = os.environ.get("MODE", "picamera")
+RES_WIDTH = os.environ.get("RES_WIDTH", "640")
+RES_HEIGHT = os.environ.get("RES_HEIGHT", "480")
+FRAMERATE = os.environ.get("FRAMERATE", "24")
 
 # Camera settings
-camera_resolution_width = 320
-camera_resolution_height = 320
+camera_resolution_width = int(RES_WIDTH)
+camera_resolution_height = int(RES_HEIGHT)
 camera_resolution = (camera_resolution_width, camera_resolution_height)
-camera_framerate = 8
+camera_framerate = int(FRAMERATE)
 camera_rotation = 180
 camera_exposure_mode = "auto"
 camera_sensor_mode = 0
 camera_awb_mode = "auto"
 camera_drc_strength = "high"
 
+
+# ----------------------------------------------------------------------------------------------- #
+# Main Program
+# ----------------------------------------------------------------------------------------------- #
 class CameraCapture:
     """Camera Capture"""
 
